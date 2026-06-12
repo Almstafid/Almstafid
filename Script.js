@@ -501,6 +501,53 @@ window.open(
 );
 
 });
+
+/* =========================================== MORE CLIENTS =========================================== */
+
+const moreClientsBtn = document.getElementById("moreClientsBtn");
+
+const clientRows = document.querySelectorAll(".client-row");
+
+let clientsOpened = false;
+
+/* إخفاء كل العناصر بعد أول 4 */
+clientRows.forEach((card, index) => {
+
+    if (index >= 4) {
+
+        card.style.display = "none";
+
+    }
+
+});
+
+/* عند الضغط على المزيد */
+moreClientsBtn.addEventListener("click", () => {
+
+    clientsOpened = !clientsOpened;
+
+    clientRows.forEach((card, index) => {
+
+        if (index >= 4) {
+
+            if (clientsOpened) {
+
+                card.style.display = "flex";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        }
+
+    });
+
+    moreClientsBtn.textContent =
+        clientsOpened ? "إخفاء" : "المزيد";
+
+});
 /* ======================================================================= CLIENTS MODAL ==================================== */
 
 const clientsModal =
@@ -1278,49 +1325,5 @@ prevClient.addEventListener("click",()=>{
         `translateX(-${currentPage * 100}%)`;
 
     }
-
-});
-/* ======== عرض المزيد ======== */
-const moreClientsBtn = document.getElementById("moreClientsBtn");
-
-const clientsCards =
-document.querySelectorAll(".services-grid .service-row");
-
-/* إخفاء كل العناصر بعد أول 4 */
-
-clientsCards.forEach((card,index)=>{
-
-    if(index >= 4){
-
-        card.classList.add("hidden-client");
-    }
-
-});
-
-let opened = false;
-
-moreClientsBtn.addEventListener("click",()=>{
-
-    opened = !opened;
-
-    clientsCards.forEach((card,index)=>{
-
-        if(index >= 4){
-
-            if(opened){
-
-                card.classList.add("show");
-
-            }else{
-
-                card.classList.remove("show");
-            }
-
-        }
-
-    });
-
-    moreClientsBtn.textContent =
-    opened ? "إخفاء" : "المزيد";
 
 });
