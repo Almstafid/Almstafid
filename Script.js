@@ -503,40 +503,38 @@ window.open(
 });
 
 /* =========================================== MORE CLIENTS =========================================== */
-
 const moreClientsBtn = document.getElementById("moreClientsBtn");
-
-const clientRows = document.querySelectorAll(".client-row");
+const clientRows = document.querySelectorAll(".services-grid .client-row");
 
 let clientsOpened = false;
 
-/* إخفاء كل العناصر بعد أول 4 */
-clientRows.forEach((card, index) => {
+clientRows.forEach((card,index)=>{
 
-    if (index >= 4) {
+    if(index >= 4){
 
-        card.style.display = "none";
+        card.classList.add("hidden-client");
 
     }
 
 });
 
-/* عند الضغط على المزيد */
-moreClientsBtn.addEventListener("click", () => {
+moreClientsBtn.addEventListener("click",()=>{
 
     clientsOpened = !clientsOpened;
 
-    clientRows.forEach((card, index) => {
+    clientRows.forEach((card,index)=>{
 
-        if (index >= 4) {
+        if(index >= 4){
 
-            if (clientsOpened) {
+            if(clientsOpened){
 
-                card.style.display = "flex";
+                card.classList.remove("hidden-client");
+                card.classList.add("show-client");
 
-            } else {
+            }else{
 
-                card.style.display = "none";
+                card.classList.remove("show-client");
+                card.classList.add("hidden-client");
 
             }
 
@@ -545,7 +543,7 @@ moreClientsBtn.addEventListener("click", () => {
     });
 
     moreClientsBtn.textContent =
-        clientsOpened ? "إخفاء" : "المزيد";
+    clientsOpened ? "إخفاء" : "المزيد";
 
 });
 /* ======================================================================= CLIENTS MODAL ==================================== */
