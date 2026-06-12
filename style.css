@@ -4263,6 +4263,14 @@ font-size:22px;
     color:#8a7cff;
 }
 
+
+.hidden-client{
+    display:none !important;
+}
+
+.show-client{
+    display:flex !important;
+}
 /* ===================================================== CLIENTS MODAL ========================================== */
 
 .clients-title{
@@ -4314,6 +4322,8 @@ font-size:22px;
 .clients-whatsapp i{
     font-size:32px;
 }
+
+
 
 /* ======================================================= ABOUT MODAL ============================================= */
 .about-content{
