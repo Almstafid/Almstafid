@@ -4700,20 +4700,20 @@ color: white;
 /* هيدول اكواد العملاء الاقسام*/
 
     .clients-top h2{
-        font-size:45px;
+        font-size:25px;
         line-height:1.5;
     }
 
     .clients-top p{
-        font-size:16px;
+        font-size:10px;
     }
 
     .stats-box{
-        width:100%;
-        grid-template-columns:repeat(2,1fr);
-        padding:20px;
-        gap:20px;
-        height:auto;
+        width:800px;
+  
+        padding:15px;
+   
+        height:100px;
     }
 
     .stat-item{
@@ -4732,21 +4732,21 @@ color: white;
 
     .stat-item h3{
         margin:10px 0 5px;
-        font-size:22px;
+        font-size:12px;
     }
 
     .stat-item span{
-        font-size:15px;
+        font-size:10px;
     }
 
     .clients-wrapper{
         width:100%;
-        margin:0;
+        margin:50px;
     }
 
     .clients-page{
         grid-template-columns:repeat(2,1fr);
-        gap:15px;
+        gap:20px ;
     }
 
     .client-card-body h3{
