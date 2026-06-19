@@ -640,10 +640,10 @@ type:"سوبر ",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:"سوبر ماركت المدينة",
-location:"طرابلس - لبنان",
-type:"سوبر ماركت",
+image:"images/Restaurants SIP COFFEE .jpeg",
+name:"SIP COFFEE    ",
+location:"طرابلس ,الكوندور - لبنان",
+type:" عائلة فتفت الكرام",
    icon:"fa-utensils"
 },
 
@@ -796,10 +796,10 @@ type:"سوبر ماركت",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:"اشتراكات كهرباء ",
-location:"طرابلس - لبنان",
-type:"سوبر ماركت",
+image:"images/Mahmoud Al-Qawas  Electrician.jpeg",
+name:"اشتراك كهرباء القواص   ",
+location:"القبة - لبنان",
+type:" استاذ محمود القواص",
    icon:"fa-solid fa-bolt"
 }
 
@@ -873,10 +873,10 @@ type:"صيدلية زراعي ",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:"محلات الالبسة     ",
-location:"طرابلس - لبنان",
-type:"صيدلية زراعي ",
+image:"images/VLOR.jpeg",
+name:"  VLOR  ",
+location:"الضنية - لبنان",
+type:" عائلة فتفت وبكور ",
    icon:"fa-solid fa-shirt"
 }
 
@@ -1123,10 +1123,10 @@ type:"إطارات وبطاريات   ",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:" ناولني  ",
-location:"طرابلس - لبنان",
-type:"إطارات وبطاريات   ",
+image:"images/coffee brew.jpeg",
+name:" DREW STREET  ",
+location:"منيارة - لبنان",
+type:" استاذ وائل حدارة   ",
    icon:"fa-solid fa-mug-hot"
 }
 
@@ -1180,10 +1180,10 @@ type:"إطارات وبطاريات   ",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:" محلات قطع غيار ميكانيكية      ",
-location:"طرابلس - لبنان",
-type:"إطارات وبطاريات   ",
+image:"images/Motor accessories Tariq Al-Halawani.jpeg",
+name:" اكسسوارات  الدراجات النارية    ",
+location:"ابي سمراء,طرابلس - لبنان",
+type:"  طارق الحلواني   ",
    icon:"fa-solid fa-gears"
 }
 
@@ -1389,10 +1389,18 @@ type:"إطارات وبطاريات   ",
      clients:[
 
 {
-image:"images/we7.jpeg",
-name:"    محلات وان دولار$ 1      ",
-location:"طرابلس - لبنان",
-type:"إطارات وبطاريات   ",
+image:"images/1$ ammar.jpeg",
+name:"  سوق الدولار     ",
+location:"ببنين, عكار - لبنان",
+type:"  استاذ عمار ناصيف  ",
+   icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/1$Betty Style.jpeg",
+name:"   بيتي ستايل     ",
+location:"مخيم نهر البارد, عكار  ",
+type:"  استاذ حسين عبدالعال  ",
    icon:"fa-solid fa-house-chimney"
 }
 
