@@ -2146,3 +2146,36 @@ clientsClose.addEventListener("click",()=>{
     clientsModal.classList.remove("active");
 
 });
+<<<<<<< HEAD
+=======
+
+/* التالي */
+
+nextClient.addEventListener("click",()=>{
+
+    if(currentPage < totalPages - 1){
+
+        currentPage++;
+
+        clientsTrack.style.transform =
+        `translateX(-${currentPage * 100}%)`;
+
+    }
+
+});
+
+/* السابق */
+
+prevClient.addEventListener("click",()=>{
+
+    if(currentPage > 0){
+
+        currentPage--;
+
+        clientsTrack.style.transform =
+        `translateX(-${currentPage * 100}%)`;
+
+    }
+
+});
+>>>>>>> 176bcc589f114981f187779f7a882fb52f6db77f
