@@ -4631,44 +4631,10 @@ color: white;
 }
 /* ===================================================== CLIENTS MODAL ========================================== */
 
-.clients-title{
-    font-size:26px;
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.clients-slider{
-    width:100%;
-}
-
-
-.client-card{
-    width:auto;
-}
-
-.client-card img{
-    width:80px;
-    height:80px;
-}
-
-.client-card h3{
-    font-size:14px;
-}
-
-
-
-.clients-whatsapp{
-    width:65px;
-    height:65px;
-}
-
-.clients-whatsapp i{
-    font-size:32px;
-}
 
 .clients-close{
     top: 15px;
-    right: 15px;
+    right: 5px;
     width: 45px;
     height: 45px;
     font-size: 26px;
@@ -4676,64 +4642,135 @@ color: white;
 
 /* هيدول اكواد العملاء الاقسام*/
 
+    /* عنوان القسم */
     .clients-top h2{
-        font-size:20px;
+        font-size:30px;
         line-height:1.5;
     }
 
     .clients-top p{
-        font-size:10px;
+        font-size:13px;
     }
 
+    /* الإحصائيات */
     .stats-box{
-        width:800px;
-  
-        padding:15px;
-   
-        height:100px;
+        width:100%;
+        max-width: 500px;
+        margin: auto;
+        padding:20px 15px;
+        border-radius:30px;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:10px;
+        height:auto;
     }
 
     .stat-item{
         text-align:center;
+        position:relative;
     }
 
     .stat-item:not(:last-child)::after{
-        display:none;
+        content:"";
+        position:absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+        width:1px;
+        height:45px;
+        background:rgba(255,255,255,.2);
     }
 
     .stat-item i{
-        margin:0;
-        font-size:20px;
-        display:block;
+        margin:0 0 8px;
+        font-size:22px;
     }
 
     .stat-item h3{
-        margin:2px 0 2px;
-        font-size:12px;
+        margin:0 0 5px;
+        font-size:15px;
+        color:white;
     }
 
     .stat-item span{
-        font-size:12px;
-        color: #071325 !important;
+        font-size:11px;
+        color:#d6d6d6 !important;
     }
 
-    .clients-wrapper{
-        width:100%;
-        margin:50px;
-    }
-
+    /* بطاقات العملاء */
     .clients-page{
         grid-template-columns:repeat(2,1fr);
-        gap:20px ;
+        gap:16px;
     }
 
-    .client-card-body h3{
-        font-size:16px;
+  .client-card{
+    border-radius:22px;
+    overflow:hidden;
+}
+
+    .client-card-image img{
+        width:100%;
+    height:120px;
+    object-fit:cover;
     }
 
+ .client-icon{
+    width:52px;
+    height:52px;
+    right:15px;
+    bottom:-26px;
+    border-width:4px;
+    font-size:20px;
+}
+
+    .client-card-body{
+    padding:30px 12px 15px;
+    text-align:center;
+}
+
+/*أسم المتجر*/
+ .client-card-body h3{
+    font-size:20px;
+    font-weight:700;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+    .client-location{
+        font-size:14px;
+        margin-bottom:10px;
+    }
+
+    .client-badge{
+    padding:7px 18px;
+    font-size:13px;
+    margin-bottom:12px;
+    border-radius:20px;
+}
+
+  .client-status{
+    font-size:13px;
+    gap:8px;
+}
+
+    /* أزرار الأسهم */
     .clients-btn{
         display:none;
     }
+
+    /* واتساب */
+    .clients-whatsapp{
+        width:60px;
+        height:60px;
+        bottom:20px;
+        right:20px;
+    }
+
+    .clients-whatsapp i{
+        font-size:30px;
+    }
+
+
 
 
 /* ======================================================= ABOUT MODAL ============================================= */
