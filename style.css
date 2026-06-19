@@ -2708,27 +2708,7 @@ font-size:22px;
     margin:0;
 }
 
-/* السهم 
-.client-arrow{
-    width:50px;
-    height:50px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-left: auto;
-}
 
-.client-arrow i{
-    color:#999;
-    font-size:20px;
-    transition:.3s;
-}
-
-.client-row:hover .client-arrow i{
-    color:#8a7cff;
-    transform:translateX(-5px);
-}
-*/
 /* عنوان القسم */
 .section-header{
     display:flex;
@@ -4642,26 +4622,6 @@ color: white;
     margin:0;
 }
 
-/* السهم */
-.client-arrow{
-    width:25px;
-    min-width:25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.client-arrow i{
-    font-size:20px;
-    color:#6d6d72;
-    transition:.3s;
-}
-
-.client-row:hover .client-arrow i{
-    color:#8a7cff;
-}
-
-
 .hidden-client{
     display:none !important;
 }
@@ -4671,49 +4631,183 @@ color: white;
 }
 /* ===================================================== CLIENTS MODAL ========================================== */
 
-.clients-title{
-    font-size:26px;
-    text-align:center;
-    margin-bottom:25px;
+
+.clients-close{
+      top:18px;
+    right:18px;
+
+    width:25px !important;
+    height:25px !important;
+
+    border:none;
+    border-radius:50%;
+
+    background:#5f5f5f;
+
+    color:#fff;
+
+    font-size:15px !important;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.clients-slider{
-    width:100%;
-}
+/* هيدول اكواد العملاء الاقسام*/
 
+    /* عنوان القسم */
+    .clients-top h2{
+        font-size:30px;
+        line-height:1.5;
+    }
+
+    .clients-top p{
+        font-size:13px;
+    }
+
+    /* الإحصائيات */
+    .stats-box{
+        width:100%;
+        max-width: 500px;
+        margin: auto;
+        padding:20px 15px;
+        border-radius:30px;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:10px;
+        height:auto;
+    }
+
+    .stat-item{
+        text-align:center;
+        position:relative;
+    }
+
+    .stat-item:not(:last-child)::after{
+        content:"";
+        position:absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+        width:1px;
+        height:45px;
+        background:rgba(255,255,255,.2);
+    }
+
+    .stat-item i{
+        margin:0 0 8px;
+        font-size:15px;
+    }
+
+    .stat-item h3{
+        margin:0 0 5px;
+        font-size:10px;
+        color:white;
+    }
+
+    .stat-item span{
+        font-size:10px;
+        color:#d6d6d6 !important;
+    }
+
+    /* بطاقات العملاء */
+ /* الشبكة */
 .clients-page{
+    display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:30px 10px;
+    gap:16px;
 }
 
+/* الكارد */
 .client-card{
-    width:auto;
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.client-card img{
-    width:80px;
-    height:80px;
+/* الصورة */
+.client-card-image img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
 }
 
-.client-card h3{
-    font-size:14px;
-}
+/* الأيقونة */
+.client-icon{
+    position:absolute;
+    left:20px;
+    bottom:-28px;
 
-.clients-btn{
     width:45px;
     height:45px;
+
+    border-radius:50%;
+    border:5px solid white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-size:20px;
 }
 
-
-
-.clients-whatsapp{
-    width:65px;
-    height:65px;
+/* جسم الكارد */
+.client-card-body{
+    padding:18px 20px 0;
+    text-align:right;
 }
 
-.clients-whatsapp i{
-    font-size:32px;
+/* اسم المتجر */
+.client-card-body h3{
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:4px;
+    color:#102542;
 }
+
+/* الموقع */
+.client-location{
+    font-size:12px;
+    color:#6f7480;
+    margin-bottom:12px;
+}
+
+/* الزر */
+.client-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:14px;
+}
+
+/* الحالة */
+.client-status{
+    font-size:10px;
+    line-height:1.6;
+    gap:8px;
+    margin-top: -17px;
+}
+
+    /* أزرار الأسهم */
+    .clients-btn{
+        display:none;
+    }
+
+    /* واتساب */
+    .clients-whatsapp{
+        width:60px;
+        height:60px;
+        bottom:20px;
+        right:20px;
+    }
+
+    .clients-whatsapp i{
+        font-size:30px;
+    }
+
 
 
 
