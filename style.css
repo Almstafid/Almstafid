@@ -4753,7 +4753,7 @@ color: white;
 
 /* جسم الكارد */
 .client-card-body{
-    padding:18px 20px 0;
+    padding:15px 20px 5px;
     text-align:right;
 }
 
@@ -4778,7 +4778,7 @@ color: white;
     padding:8px 18px;
     border-radius:20px;
     font-size:12px;
-    margin-bottom:35px;
+    margin-bottom:15px; /* كان 35px */
 }
 
 /* الحالة */
@@ -4786,9 +4786,8 @@ color: white;
     font-size:10px;
     line-height:1.6;
     gap:8px;
-    margin-top: -17px;
-      margin-bottom: 5px;
-
+    margin-top:-10px; /* ارفعيها لفوق */
+    margin-bottom:0;
 }
 
     /* أزرار الأسهم */
