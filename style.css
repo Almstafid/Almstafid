@@ -4761,15 +4761,15 @@ color: white;
 
 /* اسم المتجر */
 .client-card-body h3{
-    font-size:12px;
-    font-weight:700;
+    font-size:10px;
+    font-weight:500;
     margin-bottom:4px;
     color:#102542;
 }
 
 /* الموقع */
 .client-location{
-    font-size:12px;
+    font-size:10px;
     color:#6f7480;
     margin-bottom:12px;
 }
@@ -4779,7 +4779,7 @@ color: white;
     display:inline-block;
     padding:8px 18px;
     border-radius:20px;
-    font-size:12px;
+    font-size:10px;
     margin-bottom:14px;
 }
 
