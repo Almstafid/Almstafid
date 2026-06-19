@@ -2708,27 +2708,7 @@ font-size:22px;
     margin:0;
 }
 
-/* السهم 
-.client-arrow{
-    width:50px;
-    height:50px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-left: auto;
-}
 
-.client-arrow i{
-    color:#999;
-    font-size:20px;
-    transition:.3s;
-}
-
-.client-row:hover .client-arrow i{
-    color:#8a7cff;
-    transform:translateX(-5px);
-}
-*/
 /* عنوان القسم */
 .section-header{
     display:flex;
@@ -4661,10 +4641,6 @@ color: white;
     width:100%;
 }
 
-.clients-page{
-    grid-template-columns:repeat(2,1fr);
-    gap:30px 10px;
-}
 
 .client-card{
     width:auto;
@@ -4679,11 +4655,6 @@ color: white;
     font-size:14px;
 }
 
-.clients-btn{
-    width:45px;
-    height:45px;
-}
-
 
 
 .clients-whatsapp{
@@ -4695,7 +4666,13 @@ color: white;
     font-size:32px;
 }
 
-
+.clients-close{
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+}
 
 /* هيدول اكواد العملاء الاقسام*/
 
