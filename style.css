@@ -4683,17 +4683,17 @@ color: white;
 
     .stat-item i{
         margin:0 0 8px;
-        font-size:22px;
+        font-size:15px;
     }
 
     .stat-item h3{
         margin:0 0 5px;
-        font-size:15px;
+        font-size:10px;
         color:white;
     }
 
     .stat-item span{
-        font-size:11px;
+        font-size:10px;
         color:#d6d6d6 !important;
     }
 
