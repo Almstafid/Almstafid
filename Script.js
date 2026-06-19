@@ -501,6 +501,51 @@ window.open(
 );
 
 });
+
+/* =========================================== MORE CLIENTS =========================================== */
+const moreClientsBtn = document.getElementById("moreClientsBtn");
+const clientRows = document.querySelectorAll(".services-grid .client-row");
+
+let clientsOpened = false;
+
+clientRows.forEach((card,index)=>{
+
+    if(index >= 4){
+
+        card.classList.add("hidden-client");
+
+    }
+
+});
+
+moreClientsBtn.addEventListener("click",()=>{
+
+    clientsOpened = !clientsOpened;
+
+    clientRows.forEach((card,index)=>{
+
+        if(index >= 4){
+
+            if(clientsOpened){
+
+                card.classList.remove("hidden-client");
+                card.classList.add("show-client");
+
+            }else{
+
+                card.classList.remove("show-client");
+                card.classList.add("hidden-client");
+
+            }
+
+        }
+
+    });
+
+    moreClientsBtn.textContent =
+    clientsOpened ? "إخفاء" : "المزيد";
+
+});
 /* ======================================================================= CLIENTS MODAL ==================================== */
 
 const clientsModal =
@@ -515,11 +560,6 @@ document.getElementById("clientsTrack");
 const clientsTitle =
 document.getElementById("clientsTitle");
 
-const nextClient =
-document.getElementById("nextClient");
-
-const prevClient =
-document.getElementById("prevClient");
 
 /* الأقسام */
 
@@ -527,33 +567,860 @@ const clientsData = {
 
     supermarket: {
 
-        title:"عملاء السوبر ماركت",
+        title:"  ",
 
-        clients:[
+       clients:[
 
-            {image:"images/we7.jpeg",name:"سوبر ماركت المدينة"},
-            {image:"images/we9.jpeg",name:"سوبر ماركت الهدى"},
-            {image:"images/we7.jpeg",name:"سوبر ماركت البركة"},
-            {image:"images/we9.jpeg",name:"سوبر ماركت الأمان"}
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت المدينة",
+location:"طرابلس - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-cart-shopping"
+},
 
-        ]
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-cart-shopping"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-solid fa-cart-shopping"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+   icon:"fa-solid fa-cart-shopping"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-cart-shopping"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-solid fa-cart-shopping"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+   icon:"fa-solid fa-cart-shopping"
+}
+
+]
 
     },
 
+    /*================================ مطاعم ==============================*/
     restaurant: {
 
-        title:"عملاء المطاعم",
+        title:" ",
 
-        clients:[
+     clients:[
 
-            {image:"images/we7.jpeg",name:"مطعم السلطان"},
-            {image:"images/we9.jpeg",name:"مطعم الشام"},
-            {image:"images/we7.jpeg",name:"مطعم البيت اللبناني"},
-            {image:"images/we9.jpeg",name:"مطعم الريف"}
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت المدينة",
+location:"طرابلس - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-utensils"
+},
 
-        ]
 
-    }
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-utensils"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-utensils"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+   icon:"fa-utensils"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-utensils"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-utensils"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+   icon:"fa-utensils"
+}
+
+]
+
+    },
+
+      /*================================ ادوات منزلية ==============================*/
+
+ house: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت المدينة",
+location:"طرابلس - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-house-chimney"
+},
+
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+     icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الهدى",
+location:"المنية - لبنان",
+type:"سوبر ماركت",
+    icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/we7.jpeg",
+name:"سوبر ماركت البركة",
+location:"عكار - لبنان",
+type:" ماركت",
+   icon:"fa-solid fa-house-chimney"
+},
+
+{
+image:"images/we9.jpeg",
+name:"سوبر ماركت الأمان",
+location:"زغرتا - لبنان",
+type:"سوبر ",
+   icon:"fa-solid fa-house-chimney"
+}
+
+]
+
+    },
+      /*================================ >اشتراكات انترنت =============================*/
+
+ Internet: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"اشتراكات انترنت ",
+location:"طرابلس - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-wifi"
+}
+
+]
+
+    },
+      /*================================ >اشتراكات كهرباء =============================*/
+
+ Electricity: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"اشتراكات كهرباء ",
+location:"طرابلس - لبنان",
+type:"سوبر ماركت",
+   icon:"fa-solid fa-bolt"
+}
+
+]
+
+    },
+      /*================================ >منظفات  =============================*/
+
+ detergents: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"منظفات  ",
+location:"طرابلس - لبنان",
+type:"منظفات ",
+   icon:"fa-solid fa-pump-soap"
+}
+
+]
+
+    },
+      /*================================ >ادوات كهربائية   =============================*/
+
+ electricaltools: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"ادوات كهربائية   ",
+location:"طرابلس - لبنان",
+type:"منظفات ",
+   icon:"fa-solid fa-plug"
+}
+
+]
+
+    },
+      /*================================ >>صيدلية زراعية     =============================*/
+
+ Agriculturalpharmacy: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"صيدلية زراعي    ",
+location:"طرابلس - لبنان",
+type:"صيدلية زراعي ",
+   icon:"fa-solid fa-seedling"
+}
+
+]
+
+    },
+
+   /*================================ محلات الالبسة      =============================*/
+
+ clothes: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"محلات الالبسة     ",
+location:"طرابلس - لبنان",
+type:"صيدلية زراعي ",
+   icon:"fa-solid fa-shirt"
+}
+
+]
+
+    },
+   /*================================ إطارات وبطاريات         =============================*/
+
+ Tires: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"إطارات وبطاريات       ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-car-battery"
+}
+
+]
+
+    },
+   /*================================>  طاقة شمسية         =============================*/
+
+ energy: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" طاقة شمسية ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-solar-panel"
+}
+
+]
+
+    },
+
+  /*================================> محلات خضروات          =============================*/
+
+ vegetable: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات خضروات  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-leaf"
+}
+
+]
+
+    },
+  /*================================  محلات الاحذية         =============================*/
+
+ shoes: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات الاحذية  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-shoe-prints"
+}
+
+]
+
+    },
+
+  /*================================    أدوات صحية          =============================*/
+
+ Sanitary: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"  أدوات صحية   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-shower"
+}
+
+]
+
+    },
+ /*================================    الأراغيل         =============================*/
+
+ Shisha: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" الأراغيل  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-smoking"
+}
+
+]
+
+    },
+ /*================================    محامص         =============================*/
+
+ Roasters: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محامص  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-wheat-awn"
+}
+
+]
+
+    },
+ /*================================    محلات  الدواجن          =============================*/
+
+ Poultry: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  الدواجن   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-drumstick-bite"
+}
+
+]
+
+    },
+ /*================================    محلات  عطورات          =============================*/
+
+ Perfumes: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  عطورات   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-spray-can-sparkles"
+}
+
+]
+
+    },
+ /*================================    محلات  معجنات          =============================*/
+
+ pastries: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  معجنات   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-pizza-slice"
+}
+
+]
+
+    },
+ /*================================    محلات  الدهانات          =============================*/
+
+ Paint: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  الدهانات   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-paint-roller"
+}
+
+]
+
+    },
+
+/*================================    افران المخابز          =============================*/
+
+ Bakery: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" افران المخابز   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-bread-slice"
+}
+
+]
+
+    },
+/*================================   ناولني         =============================*/
+
+ Nawlani: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" ناولني  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-mug-hot"
+}
+
+]
+
+    },
+/*================================    الموتوسيكلات         =============================*/
+
+ Motor: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" الموتوسيكلات  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-motorcycle"
+}
+
+]
+
+    },
+/*================================    محلات  الموبايلات          =============================*/
+
+ Mobile: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  الموبايلات   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-mobile-screen-button"
+}
+
+]
+
+    },
+/*================================   محلات قطع غيار ميكانيكية         =============================*/
+
+ Mechanical: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات قطع غيار ميكانيكية      ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-gears"
+}
+
+]
+
+    },
+/*================================   اللحوم والأسماك       =============================*/
+
+ Meatfish: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" اللحوم والأسماك   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-fish"
+}
+
+]
+
+    },
+/*================================   محلات مكياج         =============================*/
+
+ makeup: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات مكياج   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-wand-magic-sparkles"
+}
+
+]
+
+    },
+/*================================    مكتبة       =============================*/
+
+ library: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"مكتبة  ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-book"
+}
+
+]
+
+    },
+/*================================    محلات  بوظة          =============================*/
+
+ icecream: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:" محلات  بوظة   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-ice-cream"
+}
+
+]
+
+    },
+/*================================   نادي رياضي         =============================*/
+
+ gym: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"نادي رياضي   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-dumbbell"
+}
+
+]
+
+    },
+/*================================    محلات ألعاب         =============================*/
+
+ Games: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"  محلات ألعاب   ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-gamepad"
+}
+
+]
+
+    },
+    /*================================   ملحمة       =============================*/
+
+ Epic: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"ملحمة     ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-drumstick-bite"
+}
+
+]
+
+    },
+    /*================================   ألبان و أجبان        =============================*/
+
+ Cheese: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"ألبان و أجبان      ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-cheese"
+}
+
+]
+
+    },
+    /*================================    محلات مفروشات         =============================*/
+
+ Brady: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"    محلات مفروشات      ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-couch"
+}
+
+]
+
+    },
+   /*================================    محلات عطارة         =============================*/
+
+ Attar: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"    محلات عطارة      ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-mortar-pestle"
+}
+
+]
+
+    },
+ /*================================    محلات وان دولار$ 1         =============================*/
+
+ Onedollar: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"    محلات وان دولار$ 1      ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-house-chimney"
+}
+
+]
+
+    },
+/*================================    محطات الوقود        =============================*/
+
+ stations: {
+
+        title:" ",
+
+     clients:[
+
+{
+image:"images/we7.jpeg",
+name:"   محطات الوقود     ",
+location:"طرابلس - لبنان",
+type:"إطارات وبطاريات   ",
+   icon:"fa-solid fa-gas-pump"
+}
+
+]
+
+    },
+
+
+
 
 };
 
@@ -583,19 +1450,48 @@ function loadClients(section){
         const clientsSlice =
         data.clients.slice(i,i+15);
 
-        clientsSlice.forEach(client=>{
+       clientsSlice.forEach((client,index)=>{
 
-            page.innerHTML += `
+         page.innerHTML += `
 
-                <div class="client-card">
+<div class="client-card color-${index % 16}">
 
-                    <img src="${client.image}">
+    <div class="client-card-image">
 
-                    <h3>${client.name}</h3>
+        <img src="${client.image}">
 
-                </div>
+        <div class="client-icon">
+       <i class="fa-solid ${client.icon}"></i>
+        </div>
 
-            `;
+    </div>
+
+    <div class="client-card-body">
+
+        <h3>${client.name}</h3>
+
+      <p class="client-location">
+    <i class="fa-solid fa-location-dot"></i>
+    ${client.location}
+</p>
+
+        <span class="client-badge">
+    ${client.type}
+</span>
+
+        <div class="client-status">
+
+            عميل معتمد لدى المستفيد للمحاسبة
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+`;
 
         });
 
@@ -1248,79 +2144,5 @@ if(stationsBtn){
 clientsClose.addEventListener("click",()=>{
 
     clientsModal.classList.remove("active");
-
-});
-
-/* التالي */
-
-nextClient.addEventListener("click",()=>{
-
-    if(currentPage < totalPages - 1){
-
-        currentPage++;
-
-        clientsTrack.style.transform =
-        `translateX(-${currentPage * 100}%)`;
-
-    }
-
-});
-
-/* السابق */
-
-prevClient.addEventListener("click",()=>{
-
-    if(currentPage > 0){
-
-        currentPage--;
-
-        clientsTrack.style.transform =
-        `translateX(-${currentPage * 100}%)`;
-
-    }
-
-});
-/* ======== عرض المزيد ======== */
-const moreClientsBtn = document.getElementById("moreClientsBtn");
-
-const clientsCards =
-document.querySelectorAll(".services-grid .service-row");
-
-/* إخفاء كل العناصر بعد أول 4 */
-
-clientsCards.forEach((card,index)=>{
-
-    if(index >= 4){
-
-        card.classList.add("hidden-client");
-    }
-
-});
-
-let opened = false;
-
-moreClientsBtn.addEventListener("click",()=>{
-
-    opened = !opened;
-
-    clientsCards.forEach((card,index)=>{
-
-        if(index >= 4){
-
-            if(opened){
-
-                card.classList.add("show");
-
-            }else{
-
-                card.classList.remove("show");
-            }
-
-        }
-
-    });
-
-    moreClientsBtn.textContent =
-    opened ? "إخفاء" : "المزيد";
 
 });
