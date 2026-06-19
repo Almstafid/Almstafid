@@ -4699,8 +4699,6 @@ color: white;
 
 /* هيدول اكواد العملاء الاقسام*/
 
-@media (max-width:768px){
-
     .clients-top h2{
         font-size:45px;
         line-height:1.5;
@@ -4759,7 +4757,6 @@ color: white;
         display:none;
     }
 
-}
 
 /* ======================================================= ABOUT MODAL ============================================= */
 .about-content{
