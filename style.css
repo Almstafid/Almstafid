@@ -4729,7 +4729,7 @@ color: white;
 /* الصورة */
 .client-card-image img{
     width:100%;
-    height:180px;
+    height:120px;
     object-fit:cover;
 }
 
@@ -4761,7 +4761,7 @@ color: white;
 
 /* اسم المتجر */
 .client-card-body h3{
-    font-size:13px;
+    font-size:12px;
     font-weight:700;
     margin-bottom:8px;
     color:#102542;
@@ -4779,14 +4779,14 @@ color: white;
     display:inline-block;
     padding:8px 18px;
     border-radius:20px;
-    font-size:13px;
+    font-size:12px;
     margin-bottom:14px;
 }
 
 /* الحالة */
 .client-status{
-    font-size:11px;
-    line-height:1.5;
+    font-size:10px;
+    line-height:1.6;
     gap:8px;
     margin-top: -17px;
 }
