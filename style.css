@@ -4636,8 +4636,8 @@ color: white;
       top:18px;
     right:18px;
 
-    width:30px !important;
-    height:30px !important;
+    width:25px !important;
+    height:25px !important;
 
     border:none;
     border-radius:50%;
@@ -4646,7 +4646,7 @@ color: white;
 
     color:#fff;
 
-    font-size:20px !important;
+    font-size:15px !important;
 
     display:flex;
     justify-content:center;
