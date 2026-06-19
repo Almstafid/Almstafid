@@ -1481,7 +1481,7 @@ function loadClients(section){
 
         <div class="client-status">
 
-            عميل معتمد لدى المستفيد للمحاسبة
+            عميل لدى المستفيد 
 
             <i class="fa-solid fa-circle-check"></i>
 
