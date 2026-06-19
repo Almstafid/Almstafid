@@ -4642,26 +4642,6 @@ color: white;
     margin:0;
 }
 
-/* السهم */
-.client-arrow{
-    width:25px;
-    min-width:25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.client-arrow i{
-    font-size:20px;
-    color:#6d6d72;
-    transition:.3s;
-}
-
-.client-row:hover .client-arrow i{
-    color:#8a7cff;
-}
-
-
 .hidden-client{
     display:none !important;
 }
@@ -4716,6 +4696,70 @@ color: white;
 }
 
 
+
+/* هيدول اكواد العملاء الاقسام*/
+
+@media (max-width:768px){
+
+    .clients-top h2{
+        font-size:45px;
+        line-height:1.5;
+    }
+
+    .clients-top p{
+        font-size:16px;
+    }
+
+    .stats-box{
+        width:100%;
+        grid-template-columns:repeat(2,1fr);
+        padding:20px;
+        gap:20px;
+        height:auto;
+    }
+
+    .stat-item{
+        text-align:center;
+    }
+
+    .stat-item:not(:last-child)::after{
+        display:none;
+    }
+
+    .stat-item i{
+        margin:0;
+        font-size:30px;
+        display:block;
+    }
+
+    .stat-item h3{
+        margin:10px 0 5px;
+        font-size:22px;
+    }
+
+    .stat-item span{
+        font-size:15px;
+    }
+
+    .clients-wrapper{
+        width:100%;
+        margin:0;
+    }
+
+    .clients-page{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .client-card-body h3{
+        font-size:16px;
+    }
+
+    .clients-btn{
+        display:none;
+    }
+
+}
 
 /* ======================================================= ABOUT MODAL ============================================= */
 .about-content{
