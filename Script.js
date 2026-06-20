@@ -304,59 +304,6 @@ closeAbout.addEventListener("click",()=>{
     aboutModal.classList.remove("active");
 
 });
-/* ============================================ MORE PRODUCTS2 ================================================= */
-const moreDepartmentsBtn =
-document.getElementById("moreDepartmentsBtn");
-
-const moreDepartments =
-document.getElementById("moreDepartments");
-
-moreDepartmentsBtn.onclick = () => {
-
-    moreDepartments.classList.toggle("active");
-
-    if(moreDepartments.classList.contains("active")){
-        moreDepartmentsBtn.textContent = "إخفاء";
-    }else{
-        moreDepartmentsBtn.textContent = "المزيد";
-    }
-};
-
-/* ========================================== MORE PRODUCTS ================================================= */
-const moreBtn = document.getElementById("moreBtn");
-const moreProducts = document.getElementById("moreProducts");
-
-function checkScreen(){
-
-    if(window.innerWidth <= 768){
-
-        // الموبايل
-        moreProducts.classList.remove("active");
-        moreBtn.innerText = "المزيد";
-
-    }else{
-         // اللابتوب
-    moreProducts.classList.remove("active");
-    moreBtn.innerText = "المزيد";
-}
-}
-
-checkScreen();
-
-window.addEventListener("resize", checkScreen);
-
-moreBtn.addEventListener("click", () => {
-
-    moreProducts.classList.toggle("active");
-
-    if(moreProducts.classList.contains("active")){
-        moreBtn.innerText = "إخفاء";
-    }else{
-        moreBtn.innerText = "المزيد";
-    }
-
-});
-
 
 /* ============================================= PRODUCT MODAL =============================================== */
 
@@ -502,50 +449,7 @@ window.open(
 
 });
 
-/* =========================================== MORE CLIENTS =========================================== */
-const moreClientsBtn = document.getElementById("moreClientsBtn");
-const clientRows = document.querySelectorAll(".services-grid .client-row");
 
-let clientsOpened = false;
-
-clientRows.forEach((card,index)=>{
-
-    if(index >= 4){
-
-        card.classList.add("hidden-client");
-
-    }
-
-});
-
-moreClientsBtn.addEventListener("click",()=>{
-
-    clientsOpened = !clientsOpened;
-
-    clientRows.forEach((card,index)=>{
-
-        if(index >= 4){
-
-            if(clientsOpened){
-
-                card.classList.remove("hidden-client");
-                card.classList.add("show-client");
-
-            }else{
-
-                card.classList.remove("show-client");
-                card.classList.add("hidden-client");
-
-            }
-
-        }
-
-    });
-
-    moreClientsBtn.textContent =
-    clientsOpened ? "إخفاء" : "المزيد";
-
-});
 /* ======================================================================= CLIENTS MODAL ==================================== */
 
 const clientsModal =
