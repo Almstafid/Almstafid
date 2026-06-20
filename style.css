@@ -4636,10 +4636,8 @@ color: white;
 /* النص */
 .services-grid .client-content{
      flex:1;
-max-width: 170px;
-    padding-right:90px; /* مساحة السهم */
 
-    padding-left:15px;
+    padding: 0 15px;
 
     text-align:right;
 }
@@ -4678,35 +4676,27 @@ max-width: 170px;
 
     display:flex;
     align-items:center;
-
+gap: 15PX;
     overflow:hidden;
 }
 
 .client-arrow{
-
-    position:absolute;
-
-    right:15px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:60px;
-
-    height:60px;
+    width:55px;
+    height:55px;
 
     border-radius:50%;
 
     background:linear-gradient(135deg,#4B8BFF,#2A66D9);
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    box-shadow:0 15px 35px rgba(42,102,217,.45);
+    box-shadow:0 10px 30px rgba(42,102,217,.4);
+
+    margin-right:10px;
+
+    flex-shrink:0;
 }
 
 .client-arrow i{
