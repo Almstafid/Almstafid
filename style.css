@@ -4567,11 +4567,6 @@ color: white;
     overflow:hidden;
 }
 
-.department-card:active{
-    transform:scale(.97);
-}
-
-
 .card-icon{
     position:absolute;
     left:50%;
