@@ -4622,9 +4622,9 @@ color: white;
 
 /* الصورة */
 .services-grid .client-image{
-    width:85px;
-    min-width:85px;
-    height:85px;
+    width:105px;
+    min-width:105px;
+    height:105px;
     padding:0;
 }
 
@@ -4644,27 +4644,39 @@ color: white;
 
 /* العنوان */
 .services-grid .client-content h3{
-    font-size:20px;
+    font-size:24px;
     color:white;
-    font-weight:700;
-    margin-bottom:8px;
+    font-weight:800;
+    margin-bottom:15px;
     white-space:nowrap;
 }
 
 /* الوصف */
 .services-grid .client-content p{
-    font-size:13px;
-    color:#76767D;
-    line-height:1.6;
+    font-size:15px;
+    color:#8f9db2;
+    line-height:1.8;
     margin:0;
 }
 
-.hidden-client{
-    display:none !important;
+.client-arrow{
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#4B8BFF,#2A66D9);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 10px 30px rgba(42,102,217,.4);
 }
 
-.show-client{
-    display:flex !important;
+.client-arrow i{
+    font-size:15px;
 }
 /* ===================================================== CLIENTS MODAL ========================================== */
 
