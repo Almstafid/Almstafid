@@ -4515,23 +4515,6 @@ color: white;
     gap:15px;
 }
 
-/* إخفاء أي قسم بعد الرابع */
-.departments-container .department-card:nth-child(n+5){
-    display:none;
-}
-
-/* الأقسام المخفية */
-.more-departments{
-    display:none;
-}
-
-/* عند الضغط على المزيد */
-.more-departments.active{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
     /* البطاقة */
     .department-card{
         background: white;
