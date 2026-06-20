@@ -4633,7 +4633,7 @@ color: white;
 /* النص */
 .services-grid .client-content{
     flex:1;
-    padding:0 70px 0 15PX;
+    padding:0 95px 0 15PX;
     text-align:right;
 }
 
@@ -4650,9 +4650,12 @@ color: white;
 .services-grid .client-content p{
     font-size:15px;
     color:#a9b3c5;
-    line-height:1.5;
+    line-height:1.6;
     margin:0;
    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .client-row{
@@ -4661,7 +4664,7 @@ color: white;
 
 .client-arrow{
     position:absolute;
-    right:18px;
+    right:12px;
     top:50%;
     transform:translateY(-50%);
 
