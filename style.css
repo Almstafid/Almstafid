@@ -2762,8 +2762,8 @@ font-size:22px;
 }
 
 .client-arrow{
-    width:75px;
-    height:75px;
+    width:45px;
+    height:45px;
 
     background:linear-gradient(135deg,#3B82F6,#1F56B3);
 
@@ -2774,7 +2774,7 @@ font-size:22px;
     align-items:center;
 
     color:white;
-    font-size:24px;
+    font-size:20px;
 
     box-shadow:
     0 15px 35px rgba(31,86,179,.45),
@@ -2785,6 +2785,80 @@ font-size:22px;
 
 .client-row:hover .client-arrow{
     transform:translateX(-10px) scale(1.08);
+}
+
+/*كود الجديد */
+
+.clients-gallery{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+
+  padding:0 22px;
+  margin:0 0 0;
+
+  background:linear-gradient(135deg,#071325,#0B1D38);
+  border-radius:28px;
+
+  transform:translateY(-15px) scale(.98);
+  transition:
+    max-height .7s ease,
+    opacity .35s ease,
+    padding .45s ease,
+    margin .45s ease,
+    transform .45s ease;
+}
+
+.clients-gallery.active{
+  max-height:900px;
+  opacity:1;
+  padding:22px;
+  margin:12px 0 22px;
+  transform:translateY(0) scale(1);
+}
+
+.clients-gallery img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:16px;
+  display:block;
+
+  opacity:0;
+  transform:translateY(25px) scale(.94);
+  animation:photoDrop .55s ease forwards;
+
+  box-shadow:0 10px 22px rgba(0,0,0,.28);
+}
+
+.clients-gallery.active img:nth-child(1){animation-delay:.05s}
+.clients-gallery.active img:nth-child(2){animation-delay:.10s}
+.clients-gallery.active img:nth-child(3){animation-delay:.15s}
+.clients-gallery.active img:nth-child(4){animation-delay:.20s}
+.clients-gallery.active img:nth-child(5){animation-delay:.25s}
+.clients-gallery.active img:nth-child(6){animation-delay:.30s}
+.clients-gallery.active img:nth-child(7){animation-delay:.35s}
+.clients-gallery.active img:nth-child(8){animation-delay:.40s}
+.clients-gallery.active img:nth-child(9){animation-delay:.45s}
+.clients-gallery.active img:nth-child(10){animation-delay:.50s}
+
+@keyframes photoDrop{
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.client-row.active .client-arrow i{
+  transform:rotate(180deg);
+}
+
+.client-arrow i{
+  transition:.35s ease;
 }
 
 /* ============================================= CLIENTS modal =============================================== */
@@ -3129,258 +3203,6 @@ color: white;
 
 .stat-item span{
     color:#d6d6d6;
-}
-
-
-/* الوان تصميم */
-.color-0 .client-icon{
-        background:#1e6fff;
-        color:#1e6fff;
-}
-
-
-.color-0 .client-icon i{
-    color:white;
-}
-
-.color-0 .client-status i{
-    color:#1e6fff;
-}
-
-.color-0 .client-badge{
-    background:#dce8ff;
-    color:#1e6fff;
-}
-
-.color-0 .client-card-image{
-    border-bottom:4px solid #1e6fff;
-}
-
-
-/* أخضر */
-.color-1 .client-icon{
-       background:#16b83e;
-}
-
-.color-1 .client-icon i{
-    color:white;
-}
-
-
-.color-1 .client-status i{
-     color:#16b83e;
-}
-
-.color-1 .client-badge{
-    background:#dff8e7;
-    color:#16b83e;
-}
-
-.color-1 .client-card-image{
-    border-bottom:4px solid #16b83e;
-}
-
-
-/* الأحمر */
-.color-2 .client-icon{
-    background:#ff2020;
-}
-
-.color-2 .client-icon i{
-    color:white;
-}
-
-.color-2 .client-status i{
-   color:#ff2020;
-
-}
-
-.color-2 .client-badge{
-    background:#ffe4e4;
-    color:#ff2020;
-}
-
-.color-2 .client-card-image{
-    border-bottom:4px solid #ff2020;
-}
-
-
-/* البرتقالي */
-.color-3 .client-icon{
-    background:#ff7b00;
-}
-
-.color-3 .client-icon i{
-    color:white;
-}
-
-.color-3 .client-status i{
-    color:#ff7b00;
-}
-
-.color-3 .client-badge{
-    background:#ffe8d3;
-    color:#ff7b00;
-}
-
-.color-3 .client-card-image{
-    border-bottom:4px solid #ff7b00;
-}
-
-
-/* بنفسجي */
-/* البنفسجي */
-.color-4 .client-icon{
-    background:#933dff;
-}
-
-.color-4 .client-icon i{
-    color:white;
-}
-
-.color-4 .client-status i{
-    color:#933dff;
-}
-
-.color-4 .client-badge{
-    background:#efe1ff;
-    color:#933dff;
-}
-
-.color-4 .client-card-image{
-    border-bottom:4px solid #933dff;
-}
-
-/* تركواز */
-.color-5 .client-icon{
-    background:#00b8a9;
-}
-.color-5 .client-icon i{
-    color:white;
-}
-.color-5 .client-status i{
-    color:#00b8a9;
-}
-.color-5 .client-badge{
-    background:#d8fffb;
-    color:#00b8a9;
-}
-.color-5 .client-card-image{
-    border-bottom:4px solid #00b8a9;
-}
-
-
-/* ذهبي */
-.color-6 .client-icon{
-    background:#d4a017;
-}
-.color-6 .client-icon i{
-    color:white;
-}
-.color-6 .client-status i{
-    color:#d4a017;
-}
-.color-6 .client-badge{
-    background:#fff4d1;
-    color:#d4a017;
-}
-.color-6 .client-card-image{
-    border-bottom:4px solid #d4a017;
-}
-
-
-/* وردي */
-.color-7 .client-icon{
-    background:#ff4f9a;
-}
-.color-7 .client-icon i{
-    color:white;
-}
-.color-7 .client-status i{
-    color:#ff4f9a;
-}
-.color-7 .client-badge{
-    background:#ffe0ec;
-    color:#ff4f9a;
-}
-.color-7 .client-card-image{
-    border-bottom:4px solid #ff4f9a;
-}
-
-
-/* سماوي */
-.color-8 .client-icon{
-    background:#00a8ff;
-}
-.color-8 .client-icon i{
-    color:white;
-}
-.color-8 .client-status i{
-    color:#00a8ff;
-}
-.color-8 .client-badge{
-    background:#dff3ff;
-    color:#00a8ff;
-}
-.color-8 .client-card-image{
-    border-bottom:4px solid #00a8ff;
-}
-
-
-/* أخضر ليموني */
-.color-9 .client-icon{
-    background:#84cc16;
-}
-.color-9 .client-icon i{
-    color:white;
-}
-.color-9 .client-status i{
-    color:#84cc16;
-}
-.color-9 .client-badge{
-    background:#ecfccb;
-    color:#84cc16;
-}
-.color-9 .client-card-image{
-    border-bottom:4px solid #84cc16;
-}
-
-
-/* بني */
-.color-10 .client-icon{
-    background:#8b5e3c;
-}
-.color-10 .client-icon i{
-    color:white;
-}
-.color-10 .client-status i{
-    color:#8b5e3c;
-}
-.color-10 .client-badge{
-    background:#f1e4d6;
-    color:#8b5e3c;
-}
-.color-10 .client-card-image{
-    border-bottom:4px solid #8b5e3c;
-}
-
-
-/* كحلي */
-.color-11 .client-icon{
-    background:#243b6b;
-}
-.color-11 .client-icon i{
-    color:white;
-}
-.color-11 .client-status i{
-    color:#243b6b;
-}
-.color-11 .client-badge{
-    background:#dfe7ff;
-    color:#243b6b;
-}
-.color-11 .client-card-image{
-    border-bottom:4px solid #243b6b;
 }
 
 
@@ -4598,11 +4420,12 @@ color: white;
 .services-grid{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:2px;
 }
 
 .clients-section{
-  padding:15px;
+  padding:10px 15px  ;
+
   background:#f4f6f9;
 }
 
@@ -4615,7 +4438,7 @@ color: white;
   display:grid;
   align-items:center;
    grid-template-columns:78px 1fr 42px;
-    gap:8px;
+    gap:-15px;
     padding:12px;
 
   overflow:hidden;
@@ -4646,7 +4469,7 @@ color: white;
 
 .client-content h3{
   color:#fff;
-  font-size:18px;
+  font-size:17px;
   font-weight:800;
   margin:0 0 6px;
   line-height:1.25;
@@ -4654,15 +4477,15 @@ color: white;
 
 .client-content p{
   color:#a9b3c5;
-  font-size:12px;
+  font-size:11px;
   line-height:1.6;
   margin:0;
 }
 
 /* السهم */
 .client-arrow{
-  width:42px;
-  height:52px;
+  width:35px;
+  height:35px;
   border-radius:50%;
   background:linear-gradient(135deg,#4B8BFF,#2A66D9);
 
@@ -4674,8 +4497,28 @@ color: white;
 
 .client-arrow i{
   color:#fff;
-  font-size:22px;
+  font-size:15px;
 }
+
+/* كود الجديد */
+
+  .clients-gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    border-radius:22px;
+    padding:0 12px;
+  }
+
+  .clients-gallery.active{
+    padding:12px;
+    margin:8px 0 16px;
+  }
+
+  .clients-gallery img{
+    height:125px;
+    border-radius:14px;
+  }
+
 /* ===================================================== CLIENTS MODAL ========================================== */
 
 
