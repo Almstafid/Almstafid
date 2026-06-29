@@ -5058,124 +5058,163 @@ border: 1PX solid #2055D4;
   .acc-new-content{
     width:100vw;
     height:100vh;
-    display:block;
-    padding:60px 14px 90px;
+    display:flex;
+    flex-direction:column;
+    padding:58px 16px 90px;
     overflow-y:auto;
+    background:#fff;
+    gap:18px;
+  }
+
+  .acc-new-close{
+    top:14px;
+    right:14px;
+    width:44px;
+    height:44px;
+    font-size:21px;
     background:#fff;
   }
 
+  .acc-new-gallery{
+    width:100%;
+  }
+
   .acc-main-box{
-    height:320px;
-    min-height:320px;
+    height:330px;
+    min-height:330px;
+    border-radius:28px;
   }
 
   .acc-new-main-img{
+    width:100%;
     height:100%;
-    border-radius:24px;
-    padding:20px;
+    padding:16px;
+    border-radius:28px;
+    object-fit:contain;
   }
 
   .acc-arrow{
-    width:40px;
-    height:40px;
-    font-size:14px;
+    width:48px;
+    height:48px;
+    font-size:16px;
+    background:#fff;
   }
 
-  .acc-prev{ left:10px; }
-  .acc-next{ right:10px; }
+  .acc-prev{ left:12px; }
+  .acc-next{ right:12px; }
 
   .acc-new-thumbs-wrap{
-    margin-top:12px;
+    width:100%;
+    margin-top:14px;
+    display:grid;
+    grid-template-columns:36px 1fr 36px;
+    align-items:center;
     gap:8px;
   }
 
   .thumb-arrow{
-    width:34px;
-    height:34px;
-    flex:0 0 34px;
-    font-size:13px;
+    width:36px;
+    height:36px;
+    flex:unset;
+    font-size:14px;
+    border-radius:12px;
+    box-shadow:none;
+    background:#f4f7fb;
   }
 
   .acc-new-thumbs{
+    width:100%;
+    display:flex;
+    justify-content:center;
     gap:8px;
+    overflow:hidden;
+    padding:0;
   }
 
   .acc-new-thumbs img{
-    width:58px;
-    height:58px;
-    flex:0 0 58px;
-    border-radius:12px;
-    padding:5px;
+    flex:0 0 60px;
+    width:60px;
+    height:60px;
+    border-radius:14px;
+    padding:6px;
+    background:#f4f7fb;
+    object-fit:contain;
+  }
+
+  .acc-new-thumbs img.active{
+    border:2px solid #0b66e4;
   }
 
   .acc-dots{
-    margin:8px 0 18px;
-    gap:8px;
+    margin:6px 0 8px;
+    gap:7px;
   }
 
   .acc-dots span{
-    width:8px;
-    height:8px;
+    width:7px;
+    height:7px;
   }
 
   .acc-new-info{
-    text-align:right;
+    text-align:center;
     direction:rtl;
     overflow:visible;
   }
 
   .acc-new-info h2{
-    font-size:26px;
-    margin-bottom:4px;
+    font-size:30px;
+    line-height:1.2;
+    margin:6px 0 6px;
   }
 
   .acc-new-info p{
     font-size:14px;
-    margin-bottom:8px;
+    margin-bottom:12px;
   }
 
   #accNewPrice{
-    font-size:34px;
-    margin-bottom:12px;
-    text-align:right;
-  }
-
-  .acc-new-desc{
-    font-size:14px;
-    line-height:1.8;
-    text-align:right;
+    display:block;
+    text-align:center;
+    font-size:38px;
     margin-bottom:14px;
   }
 
-  .acc-new-features{
-    gap:8px;
+  .acc-new-desc{
+    font-size:15px;
+    line-height:1.75;
+    text-align:center;
     margin-bottom:18px;
   }
 
+  .acc-new-features{
+    gap:10px;
+    margin-bottom:20px;
+  }
+
   .acc-new-features li{
-    font-size:13px;
     min-height:auto;
-    padding:10px 12px;
-    border-radius:14px;
+    padding:13px 14px;
+    border-radius:16px;
+    font-size:14px;
+    line-height:1.45;
+  }
+
+  .acc-new-features li::before{
+    font-size:20px;
+    width:30px;
+    flex:0 0 30px;
+    margin-right:10px;
   }
 
   .acc-new-whatsapp{
     position:fixed;
-    left:14px;
-    right:14px;
+    left:16px;
+    right:16px;
     bottom:14px;
-    height:54px;
+    height:56px;
     border-radius:18px;
-    font-size:17px;
+    font-size:18px;
     z-index:9999999;
-  }
-
-  .acc-new-close{
-    top:12px;
-    right:12px;
-    width:42px;
-    height:42px;
-    font-size:20px;
   }
 
 

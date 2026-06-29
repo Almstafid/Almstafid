@@ -584,7 +584,7 @@ const accDots = document.getElementById("accDots");
 let accImages = [];
 let accIndex = 0;
 let thumbStart = 0;
-const visibleThumbs = 5;
+let visibleThumbs = window.innerWidth <= 768 ? 3 : 5;
 
 /* عرض الصور الصغيرة */
 function renderGallery(){
