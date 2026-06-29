@@ -2827,7 +2827,7 @@ font-size:22px;
   object-fit:cover;
   border-radius:16px;
   display:block;
-
+border: 1PX solid #2055D4;
   opacity:0;
   transform:translateY(25px) scale(.94);
   animation:photoDrop .55s ease forwards;
