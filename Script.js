@@ -533,16 +533,21 @@ if (oldGallery && oldGallery.classList.contains("clients-gallery")) {
     document.querySelectorAll(".clients-gallery").forEach(gallery => gallery.remove());
     document.querySelectorAll(".client-row").forEach(item => item.classList.remove("active"));
 
-    const gallery = document.createElement("div");
-    gallery.className = "clients-gallery active";
+ const gallery = document.createElement("div");
+gallery.className = "clients-gallery";
 
-    images.forEach(image => {
-      gallery.innerHTML += `
-        <img src="${image}" alt="">
-      `;
-    });
+images.forEach(image => {
+  gallery.innerHTML += `
+    <img src="${image}" alt="">
+  `;
+});
 
-    row.insertAdjacentElement("afterend", gallery);
-    row.classList.add("active");
+row.insertAdjacentElement("afterend", gallery);
+
+requestAnimationFrame(() => {
+  gallery.classList.add("active");
+});
+
+row.classList.add("active");
   });
 });
