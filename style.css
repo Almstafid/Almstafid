@@ -4598,7 +4598,7 @@ color: white;
 .services-grid{
   display:flex;
   flex-direction:column;
-  gap:5px;
+  gap:2px;
 }
 
 .clients-section{
