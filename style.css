@@ -5049,137 +5049,135 @@ border: 1PX solid #2055D4;
 
 /* ============================================================== MODAL ACCESSORIES ==================================================== */
 
-.acc-new-content{
-    width:100%;
-    height:100%;
-    grid-template-columns:1fr;
-    gap:18px;
-    padding:70px 15px 20px;
+  .acc-new-modal{
+    padding:0;
+    background:#fff;
+    overflow:hidden;
+  }
+
+  .acc-new-content{
+    width:100vw;
+    height:100vh;
+    display:block;
+    padding:60px 14px 90px;
     overflow-y:auto;
-}
+    background:#fff;
+  }
 
-.acc-new-gallery{
-    order:1;
-}
+  .acc-main-box{
+    height:320px;
+    min-height:320px;
+  }
 
-.acc-main-box{
-    height:300px;
-    min-height:auto;
-}
-
-.acc-new-main-img{
-    width:100%;
+  .acc-new-main-img{
     height:100%;
-    border-radius:22px;
-    padding:18px;
-}
+    border-radius:24px;
+    padding:20px;
+  }
 
-.acc-arrow{
-    width:42px;
-    height:42px;
-    font-size:15px;
-}
-
-.acc-prev{
-    left:12px;
-}
-
-.acc-next{
-    right:12px;
-}
-
-.acc-new-thumbs-wrap{
-    gap:8px;
-    margin-top:12px;
-}
-
-.thumb-arrow{
-    width:36px;
-    height:36px;
-    flex:0 0 36px;
+  .acc-arrow{
+    width:40px;
+    height:40px;
     font-size:14px;
-}
+  }
 
-.acc-new-thumbs{
+  .acc-prev{ left:10px; }
+  .acc-next{ right:10px; }
+
+  .acc-new-thumbs-wrap{
+    margin-top:12px;
     gap:8px;
-}
+  }
 
-.acc-new-thumbs img{
+  .thumb-arrow{
+    width:34px;
+    height:34px;
+    flex:0 0 34px;
+    font-size:13px;
+  }
+
+  .acc-new-thumbs{
+    gap:8px;
+  }
+
+  .acc-new-thumbs img{
     width:58px;
     height:58px;
     flex:0 0 58px;
     border-radius:12px;
     padding:5px;
-}
+  }
 
-.acc-dots{
-    margin-top:8px;
+  .acc-dots{
+    margin:8px 0 18px;
     gap:8px;
-}
+  }
 
-.acc-dots span{
+  .acc-dots span{
     width:8px;
     height:8px;
-}
+  }
 
-.acc-new-info{
-    order:2;
-    text-align:center;
-}
+  .acc-new-info{
+    text-align:right;
+    direction:rtl;
+    overflow:visible;
+  }
 
-.acc-new-info h2{
-    font-size:28px;
+  .acc-new-info h2{
+    font-size:26px;
     margin-bottom:4px;
-}
+  }
 
-.acc-new-info p{
+  .acc-new-info p{
     font-size:14px;
-    margin-bottom:10px;
-}
+    margin-bottom:8px;
+  }
 
-#accNewPrice{
+  #accNewPrice{
     font-size:34px;
     margin-bottom:12px;
-}
+    text-align:right;
+  }
 
-.acc-new-desc{
+  .acc-new-desc{
     font-size:14px;
     line-height:1.8;
-    margin-bottom:15px;
-}
+    text-align:right;
+    margin-bottom:14px;
+  }
 
-.acc-new-features{
+  .acc-new-features{
     gap:8px;
-}
+    margin-bottom:18px;
+  }
 
-.acc-new-features li{
+  .acc-new-features li{
     font-size:13px;
-    padding:10px 12px;
     min-height:auto;
-    border-radius:12px;
-}
-
-.acc-new-features li::before{
-    font-size:18px;
-    width:26px;
-    margin-right:10px;
-}
-
-.acc-new-whatsapp{
-    width:100%;
-    height:50px;
-    font-size:16px;
+    padding:10px 12px;
     border-radius:14px;
-    margin-top:15px;
-}
+  }
 
-.acc-new-close{
+  .acc-new-whatsapp{
+    position:fixed;
+    left:14px;
+    right:14px;
+    bottom:14px;
+    height:54px;
+    border-radius:18px;
+    font-size:17px;
+    z-index:9999999;
+  }
+
+  .acc-new-close{
     top:12px;
     right:12px;
     width:42px;
     height:42px;
     font-size:20px;
-}
+  }
+
 
 
 
