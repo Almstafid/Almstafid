@@ -4188,7 +4188,8 @@ border: 1PX solid #2055D4;
 
 /* كود الجديد */
   .clients-gallery{
-    grid-template-columns:repeat(2,1fr);
+ display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
     gap:10px;
 
     padding:0 12px;
