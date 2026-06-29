@@ -1780,44 +1780,6 @@ margin: 0 !important;
     font-weight: 400;
 }
 
-/* MORE */
-.section-header button{
-
-    border: none;
-
-    outline: none;
-
-    cursor: pointer;
-
-    text-decoration: none;
-
-    color: white;
-
-    background: linear-gradient(135deg,#3baee7,#1e7fb5);
-
-    padding: 12px 24px;
-
-    border-radius: 30px;
-
-    font-size: 15px;
-
-    font-weight: bold;
-
-    transition: 0.4s;
-
-    box-shadow: 0 5px 15px rgba(59,174,231,0.35);
-}
-
-/* HOVER */
-
-.section-header button:hover{
-
-    transform: translateY(-3px);
-
-    box-shadow: 0 8px 20px rgba(59,174,231,0.5);
-
-    background: linear-gradient(135deg,#4cc4ff,#102542);
-}
 
 
 /* PRODUCTS */
@@ -2890,8 +2852,491 @@ border: 1PX solid #2055D4;
   }
 }
 
+/* ======================================================================= ACCESSORIES SECTION ============================================= */
+
+.acc-section{
+   padding:18px 15px 28px;
+  background:#f4f6f9;
+
+}
+
+.acc-section .section-header{
+  margin-bottom:12px;
+}
+
+.acc-grid{
+  max-width:1150px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+}
+
+.acc-card{
+  position:relative;
+  background:#fff;
+  border-radius:22px;
+  padding:14px;
+  min-height:260px;
+  box-shadow:0 12px 28px rgba(7,19,37,.08);
+}
+
+.acc-card img{
+  width:100%;
+  height:120px;
+  object-fit:contain;
+  display:block;
+  margin-bottom:12px;
+}
+
+.acc-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 35px rgba(7,19,37,.14);
+}
+
+.acc-heart{
+  position:absolute;
+  top:13px;
+  left:13px;
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:#f7f9fc;
+  color:#9ca3af;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.acc-heart.active{
+  background:#2055D4;
+  color:#fff;
+  transform:scale(1.12);
+  box-shadow:0 8px 18px rgba(32,85,212,.35);
+    animation:heartPop .35s ease;
+}
 
 
+@keyframes heartPop{
+  0%{transform:scale(.7);}
+  60%{transform:scale(1.25);}
+  100%{transform:scale(1);}
+}
+.acc-card h3{
+  margin:0 0 5px;
+  color:#071325;
+  font-size:15px;
+  font-weight:900;
+  line-height:1.5;
+}
+
+.acc-card p{
+  margin:0 0 8px;
+  color:#7b8494;
+  font-size:13px;
+}
+
+.acc-rate{
+  color:#f6b400;
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.acc-rate span{
+  color:#7b8494;
+  margin-right:4px;
+}
+
+.acc-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.acc-bottom strong{
+  color:#071325;
+  font-size:18px;
+  font-weight:900;
+}
+
+.acc-bottom button{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#3B82F6,#005CFF);
+  color:white;
+  font-size:18px;
+  box-shadow:0 10px 22px rgba(31,111,255,.35);
+}
+/* ======================================================================= MODAL SECTION ============================================= */
+.acc-product-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(7,19,37,.72);
+  backdrop-filter:blur(10px);
+  z-index:999999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.acc-product-modal.active{
+  display:flex;
+}
+
+.acc-modal-box{
+  position:relative;
+  width:min(1250px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:34px;
+  padding:34px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:36px;
+  direction:rtl;
+  animation:accModalOpen .45s ease;
+}
+
+@keyframes accModalOpen{
+  from{opacity:0; transform:translateY(35px) scale(.96);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+
+
+.acc-thumbs{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.acc-thumbs img{
+  width:92px;
+  height:92px;
+  object-fit:cover;
+  border-radius:16px;
+  padding:6px;
+  background:#fff;
+  border:2px solid transparent;
+  box-shadow:0 8px 20px rgba(7,19,37,.08);
+  cursor:pointer;
+}
+
+.acc-thumbs img.active{
+  border-color:#2077ff;
+}
+
+.acc-main-image{
+  position:relative;
+  background:linear-gradient(135deg,#f8fbff,#edf5ff);
+  border-radius:30px;
+  min-height:560px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.acc-main-image img{
+  max-width:88%;
+  max-height:500px;
+  object-fit:contain;
+  animation:accImgShow .35s ease;
+}
+
+@keyframes accImgShow{
+  from{opacity:0; transform:scale(.96);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.acc-img-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  color:#071325;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  cursor:pointer;
+}
+
+.acc-prev{left:20px;}
+.acc-next{right:20px;}
+
+.acc-modal-info h2{
+  margin:0 0 8px;
+  color:#071325;
+  font-size:34px;
+  font-weight:900;
+}
+
+.acc-modal-subtitle{
+  margin:0 0 18px;
+  color:#6b7280;
+  font-size:16px;
+}
+
+.acc-price-row{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:22px;
+}
+
+.acc-price-row strong{
+  color:#176fdc;
+  font-size:48px;
+  font-weight:900;
+}
+
+.acc-price-row span{
+  color:#f6b400;
+  font-size:16px;
+}
+
+.acc-modal-info h3{
+  color:#0b2a55;
+  font-size:22px;
+  margin:0 0 10px;
+}
+
+.acc-desc{
+  color:#4b5563;
+  font-size:15px;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+
+.acc-features{
+  list-style:none;
+  padding:0;
+  margin:0 0 22px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.acc-features li{
+  background:#f5f7fb;
+  border-radius:16px;
+  padding:14px 16px;
+  color:#1f2937;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.acc-features li i{
+  color:#2077ff;
+  margin-left:8px;
+}
+
+
+
+
+/* =======================================================================================================
+========================================================================================================== */
+.acc-new-modal{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100dvh;
+  background:rgba(7,19,37,.82);
+  backdrop-filter:blur(10px);
+  z-index:9999999;
+  display:none;
+  overflow-y:auto;
+}
+
+.acc-new-modal.active{
+   display:block;
+  align-items:center;
+  justify-content:center;
+}
+
+.acc-new-gallery{
+    display:flex;
+    flex-direction:column;
+}
+
+.acc-new-content{
+  width:100%;
+  min-height:100dvh;
+  background:#fff;
+  border-radius:0;
+  padding:80px 45px 35px;
+
+  display:grid;
+    grid-template-columns:1.15fr .85fr;
+    direction:ltr;
+    align-items:start;
+  
+gap:40px;
+  animation:accOpen .45s ease;
+}
+
+@keyframes accOpen{
+  from{opacity:0; transform:translateY(35px) scale(.96);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+
+
+.acc-new-close{
+    position: fixed;
+    top: 20px;
+    right: 25px;
+
+    width: 33px;
+    height: 33px;
+
+    background: #bbb8b8;
+    color: #102542;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    z-index: 9999999;
+
+    transition: .3s;
+}
+
+.acc-new-close:hover{
+    background:#1d5aa6;
+    color:#fff;
+    transform: rotate(90deg);
+}
+.acc-new-main-img{
+    width:100%;
+    height:620px;
+    object-fit:contain;
+    background:#f5f8fd;
+    border-radius:24px;
+    padding:25px;
+}
+
+.acc-new-thumbs{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:20px;
+}
+
+.acc-new-thumbs img{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+    border-radius:16px;
+    background:#f5f8fd;
+    padding:8px;
+    cursor:pointer;
+    border:2px solid transparent;
+}
+
+.acc-new-thumbs img.active{
+    border-color:#2055D4;
+}
+
+.acc-new-info{
+    direction:rtl;
+    text-align:right;
+}
+
+.acc-new-info h2{
+  font-size:34px;
+  margin:0 0 10px;
+  color:#071325;
+}
+
+.acc-new-info p{
+  color:#6b7280;
+  margin:0 0 18px;
+}
+
+#accNewPrice{
+  display:block;
+  color:#2055D4;
+  font-size:44px;
+  margin-bottom:18px;
+}
+
+.acc-new-desc{
+  color:#374151;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+
+.acc-new-features{
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:10px;
+}
+
+.acc-new-features li{
+  background:#f4f7fb;
+  padding:13px 15px;
+  border-radius:14px;
+}
+
+.acc-new-whatsapp{
+  height:58px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#32c7ea,#00518f);
+  color:#fff;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:800;
+}
+
+.acc-main-box{
+    position:relative;
+}
+
+.acc-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#071325;
+    box-shadow:0 10px 22px rgba(0,0,0,.15);
+    cursor:pointer;
+    z-index:5;
+    transition:.3s;
+}
+
+.acc-arrow:hover{
+    background:#2055D4;
+    color:#fff;
+}
+
+.acc-prev{
+    left:18px;
+}
+
+.acc-next{
+    right:18px;
+}
 /* =======================================================================================================
 ========================================================================================================== */
 /* =======================================================================================================
@@ -3458,7 +3903,6 @@ border: 1PX solid #2055D4;
     box-shadow:0 6px 15px rgba(57,175,244,.25);
 }
 /*  الهيدر الأزرق للعروضات:  */
-
 /* الشريط */
 .section-header{
 
@@ -3986,24 +4430,6 @@ border: 1PX solid #2055D4;
         background: #f4f6f9;
     }
 
-    /* شريط العنوان */
-    .section-header{
- background:linear-gradient(135deg,#071325,#0B1D38);
-        border-radius: 25px;
-        padding: 14px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .section-header h2{
-        color: white;
-        font-size: 30px;
-        margin: 0;
-        font-weight: bold;
-    }
-
     .more-btn{
         background: linear-gradient(to right,#42c9ff,#63d3ff);
         color: white;
@@ -4507,6 +4933,37 @@ border: 1PX solid #2055D4;
     background:#FF0000;
     color:white;
 }
+
+
+
+
+
+/* ============================================================== MODAL SECTION ==================================================== */
+  .acc-new-modal{
+    padding:0;
+  }
+
+  .acc-new-content{
+    min-height:100vh;
+    max-height:none;
+    border-radius:0;
+    grid-template-columns:1fr;
+    padding:75px 15px 25px;
+  }
+
+  .acc-new-main-img{
+    height:320px;
+  }
+
+  .acc-new-info h2{
+    font-size:26px;
+  }
+
+  #accNewPrice{
+    font-size:36px;
+  }
+
+
 /* ===================================================== ===============================================================
 GENERAL MOBILE FIXES 
 =============================================================================================================== */

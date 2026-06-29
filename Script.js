@@ -551,3 +551,123 @@ requestAnimationFrame(() => {
 row.classList.add("active");
   });
 });
+
+/* ======================================================================= ACCESSORIES SECTION ============================================= */
+/* كرمال يضوي القلب بالاكسسوارات*/
+document.querySelectorAll(".acc-heart").forEach(btn=>{
+
+    btn.addEventListener("click",function(e){
+
+        e.stopPropagation();
+
+        this.classList.toggle("active");
+
+    });
+
+});
+
+/*-- ============================================================== MODAL ACCESSORIES ====================================================*/
+const accNewModal = document.getElementById("accNewModal");
+const accNewClose = document.getElementById("accNewClose");
+const accNewMainImg = document.getElementById("accNewMainImg");
+const accNewThumbs = document.getElementById("accNewThumbs");
+
+const accPrev = document.getElementById("accPrev");
+const accNext = document.getElementById("accNext");
+
+let accCurrent = 0;
+let accImages = [];
+
+function updateAccImage(){
+  accNewMainImg.src = accImages[accCurrent];
+
+  document.querySelectorAll("#accNewThumbs img").forEach((img,i)=>{
+    img.classList.toggle("active", i === accCurrent);
+  });
+}
+
+document.querySelectorAll(".acc-card").forEach(card => {
+  card.addEventListener("click", e => {
+    if(e.target.closest(".acc-heart")) return;
+
+    const data = card.querySelector(".acc-modal-data");
+    if(!data) return;
+
+    document.getElementById("accNewTitle").innerText =
+      data.querySelector(".acc-data-title").innerText;
+
+    document.getElementById("accNewSubtitle").innerText =
+      data.querySelector(".acc-data-subtitle").innerText;
+
+    document.getElementById("accNewPrice").innerText =
+      data.querySelector(".acc-data-price").innerText;
+
+    document.getElementById("accNewDesc").innerText =
+      data.querySelector(".acc-data-desc").innerText;
+
+    document.getElementById("accNewFeatures").innerHTML =
+      [...data.querySelectorAll(".acc-data-features li")]
+      .map(li => `<li>${li.innerText}</li>`)
+      .join("");
+
+    accImages = [...data.querySelectorAll(".acc-data-images img")]
+      .map(img => img.src);
+
+    accCurrent = 0;
+
+    accNewThumbs.innerHTML = accImages.map((src,index) => `
+      <img src="${src}" class="${index === 0 ? "active" : ""}" data-index="${index}">
+    `).join("");
+
+    updateAccImage();
+
+    accNewThumbs.querySelectorAll("img").forEach(thumb => {
+      thumb.addEventListener("click", e => {
+        accCurrent = Number(e.target.dataset.index);
+        updateAccImage();
+      });
+    });
+
+    const productName = data.querySelector(".acc-data-title").innerText;
+
+    document.getElementById("accNewWhatsapp").href =
+      "https://wa.me/96181390018?text=" +
+      encodeURIComponent("مرحبا، أريد طلب " + productName);
+
+    accNewModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+accPrev.addEventListener("click", e => {
+  e.stopPropagation();
+
+  if(accImages.length === 0) return;
+
+  accCurrent--;
+
+  if(accCurrent < 0){
+    accCurrent = accImages.length - 1;
+  }
+
+  updateAccImage();
+});
+
+accNext.addEventListener("click", e => {
+  e.stopPropagation();
+
+  if(accImages.length === 0) return;
+
+  accCurrent++;
+
+  if(accCurrent >= accImages.length){
+    accCurrent = 0;
+  }
+
+  updateAccImage();
+});
+
+accNewClose.addEventListener("click", () => {
+  accNewModal.classList.remove("active");
+  document.body.style.overflow = "";
+});
