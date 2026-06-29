@@ -4662,7 +4662,7 @@ color: white;
 /* السهم */
 .client-arrow{
   width:42px;
-  height:52px;
+  height:42px;
   border-radius:50%;
   background:linear-gradient(135deg,#4B8BFF,#2A66D9);
 
@@ -4674,7 +4674,7 @@ color: white;
 
 .client-arrow i{
   color:#fff;
-  font-size:22px;
+  font-size:18px;
 }
 /* ===================================================== CLIENTS MODAL ========================================== */
 
