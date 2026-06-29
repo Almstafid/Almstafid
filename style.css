@@ -5044,9 +5044,6 @@ border: 1PX solid #2055D4;
 }
 
 
-
-
-
 /* ============================================================== MODAL ACCESSORIES ==================================================== */
 
   .acc-new-modal{
@@ -5060,93 +5057,87 @@ border: 1PX solid #2055D4;
     height:100vh;
     display:flex;
     flex-direction:column;
-    padding:58px 16px 90px;
+    padding:70px 16px 90px;
     overflow-y:auto;
     background:#fff;
-    gap:18px;
   }
 
   .acc-new-close{
-    top:14px;
-    right:14px;
-    width:44px;
-    height:44px;
-    font-size:21px;
+    top:16px;
+    right:16px;
+    width:48px;
+    height:48px;
+    font-size:22px;
     background:#fff;
   }
 
   .acc-new-gallery{
     width:100%;
+    flex:0 0 auto;
   }
 
   .acc-main-box{
-    height:330px;
-    min-height:330px;
-    border-radius:28px;
+    height:300px;
+    min-height:300px;
+    margin-bottom:16px;
   }
 
   .acc-new-main-img{
     width:100%;
     height:100%;
-    padding:16px;
-    border-radius:28px;
+    padding:14px;
+    border-radius:26px;
     object-fit:contain;
   }
 
   .acc-arrow{
-    width:48px;
-    height:48px;
+    width:46px;
+    height:46px;
     font-size:16px;
-    background:#fff;
   }
 
-  .acc-prev{ left:12px; }
-  .acc-next{ right:12px; }
+  .acc-prev{ left:10px; }
+  .acc-next{ right:10px; }
 
   .acc-new-thumbs-wrap{
     width:100%;
-    margin-top:14px;
+    height:72px;
     display:grid;
-    grid-template-columns:36px 1fr 36px;
+    grid-template-columns:38px 1fr 38px;
     align-items:center;
     gap:8px;
+    margin:0 0 10px;
   }
 
   .thumb-arrow{
-    width:36px;
-    height:36px;
+    width:38px;
+    height:38px;
     flex:unset;
-    font-size:14px;
     border-radius:12px;
     box-shadow:none;
     background:#f4f7fb;
   }
 
   .acc-new-thumbs{
-    width:100%;
+    height:72px;
     display:flex;
+    align-items:center;
     justify-content:center;
     gap:8px;
     overflow:hidden;
-    padding:0;
   }
 
   .acc-new-thumbs img{
-    flex:0 0 60px;
-    width:60px;
-    height:60px;
+    width:64px;
+    height:64px;
+    flex:0 0 64px;
     border-radius:14px;
     padding:6px;
     background:#f4f7fb;
-    object-fit:contain;
-  }
-
-  .acc-new-thumbs img.active{
-    border:2px solid #0b66e4;
   }
 
   .acc-dots{
-    margin:6px 0 8px;
+    margin:0 0 18px;
     gap:7px;
   }
 
@@ -5156,6 +5147,7 @@ border: 1PX solid #2055D4;
   }
 
   .acc-new-info{
+    width:100%;
     text-align:center;
     direction:rtl;
     overflow:visible;
@@ -5164,16 +5156,15 @@ border: 1PX solid #2055D4;
   .acc-new-info h2{
     font-size:30px;
     line-height:1.2;
-    margin:6px 0 6px;
+    margin:0 0 6px;
   }
 
   .acc-new-info p{
     font-size:14px;
-    margin-bottom:12px;
+    margin:0 0 12px;
   }
 
   #accNewPrice{
-    display:block;
     text-align:center;
     font-size:38px;
     margin-bottom:14px;
@@ -5188,22 +5179,14 @@ border: 1PX solid #2055D4;
 
   .acc-new-features{
     gap:10px;
-    margin-bottom:20px;
+    margin-bottom:22px;
   }
 
   .acc-new-features li{
-    min-height:auto;
     padding:13px 14px;
     border-radius:16px;
     font-size:14px;
     line-height:1.45;
-  }
-
-  .acc-new-features li::before{
-    font-size:20px;
-    width:30px;
-    flex:0 0 30px;
-    margin-right:10px;
   }
 
   .acc-new-whatsapp{
@@ -5216,7 +5199,6 @@ border: 1PX solid #2055D4;
     font-size:18px;
     z-index:9999999;
   }
-
 
 
 
