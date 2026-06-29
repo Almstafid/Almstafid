@@ -567,6 +567,8 @@ document.querySelectorAll(".acc-heart").forEach(btn=>{
 });
 
 /*-- ============================================================== MODAL ACCESSORIES ====================================================*/
+/* ================= MODAL ACCESSORIES ================= */
+
 const accNewModal = document.getElementById("accNewModal");
 const accNewClose = document.getElementById("accNewClose");
 const accNewMainImg = document.getElementById("accNewMainImg");
@@ -575,17 +577,69 @@ const accNewThumbs = document.getElementById("accNewThumbs");
 const accPrev = document.getElementById("accPrev");
 const accNext = document.getElementById("accNext");
 
-let accCurrent = 0;
+const thumbPrev = document.getElementById("thumbPrev");
+const thumbNext = document.getElementById("thumbNext");
+const accDots = document.getElementById("accDots");
+
 let accImages = [];
+let accIndex = 0;
+let thumbStart = 0;
+const visibleThumbs = 5;
 
-function updateAccImage(){
-  accNewMainImg.src = accImages[accCurrent];
+/* عرض الصور الصغيرة */
+function renderGallery(){
+  if(accImages.length === 0) return;
 
-  document.querySelectorAll("#accNewThumbs img").forEach((img,i)=>{
-    img.classList.toggle("active", i === accCurrent);
+  accNewMainImg.src = accImages[accIndex];
+
+  accNewThumbs.innerHTML = "";
+
+  accImages.slice(thumbStart, thumbStart + visibleThumbs).forEach((src, i) => {
+    const realIndex = thumbStart + i;
+
+    const img = document.createElement("img");
+    img.src = src;
+
+    if(realIndex === accIndex){
+      img.classList.add("active");
+    }
+
+    img.onclick = () => {
+      accIndex = realIndex;
+      renderGallery();
+    };
+
+    accNewThumbs.appendChild(img);
+  });
+
+  accDots.innerHTML = "";
+
+  accImages.forEach((_, i) => {
+    const dot = document.createElement("span");
+
+    if(i === accIndex){
+      dot.classList.add("active");
+    }
+
+    dot.onclick = () => {
+      accIndex = i;
+
+      if(accIndex < thumbStart){
+        thumbStart = accIndex;
+      }
+
+      if(accIndex >= thumbStart + visibleThumbs){
+        thumbStart = accIndex - visibleThumbs + 1;
+      }
+
+      renderGallery();
+    };
+
+    accDots.appendChild(dot);
   });
 }
 
+/* فتح المودال */
 document.querySelectorAll(".acc-card").forEach(card => {
   card.addEventListener("click", e => {
     if(e.target.closest(".acc-heart")) return;
@@ -613,20 +667,10 @@ document.querySelectorAll(".acc-card").forEach(card => {
     accImages = [...data.querySelectorAll(".acc-data-images img")]
       .map(img => img.src);
 
-    accCurrent = 0;
+    accIndex = 0;
+    thumbStart = 0;
 
-    accNewThumbs.innerHTML = accImages.map((src,index) => `
-      <img src="${src}" class="${index === 0 ? "active" : ""}" data-index="${index}">
-    `).join("");
-
-    updateAccImage();
-
-    accNewThumbs.querySelectorAll("img").forEach(thumb => {
-      thumb.addEventListener("click", e => {
-        accCurrent = Number(e.target.dataset.index);
-        updateAccImage();
-      });
-    });
+    renderGallery();
 
     const productName = data.querySelector(".acc-data-title").innerText;
 
@@ -639,35 +683,72 @@ document.querySelectorAll(".acc-card").forEach(card => {
   });
 });
 
-accPrev.addEventListener("click", e => {
+/* أسهم الصورة الكبيرة */
+accPrev.onclick = e => {
   e.stopPropagation();
 
   if(accImages.length === 0) return;
 
-  accCurrent--;
+  accIndex--;
 
-  if(accCurrent < 0){
-    accCurrent = accImages.length - 1;
+  if(accIndex < 0){
+    accIndex = accImages.length - 1;
   }
 
-  updateAccImage();
-});
+  if(accIndex < thumbStart){
+    thumbStart = accIndex;
+  }
 
-accNext.addEventListener("click", e => {
+  if(accIndex >= thumbStart + visibleThumbs){
+    thumbStart = accIndex - visibleThumbs + 1;
+  }
+
+  renderGallery();
+};
+
+accNext.onclick = e => {
   e.stopPropagation();
 
   if(accImages.length === 0) return;
 
-  accCurrent++;
+  accIndex++;
 
-  if(accCurrent >= accImages.length){
-    accCurrent = 0;
+  if(accIndex >= accImages.length){
+    accIndex = 0;
   }
 
-  updateAccImage();
-});
+  if(accIndex < thumbStart){
+    thumbStart = accIndex;
+  }
 
-accNewClose.addEventListener("click", () => {
+  if(accIndex >= thumbStart + visibleThumbs){
+    thumbStart = accIndex - visibleThumbs + 1;
+  }
+
+  renderGallery();
+};
+
+/* أسهم الصور الصغيرة: تحرك الصور تحت فقط */
+thumbPrev.onclick = e => {
+  e.stopPropagation();
+
+  if(thumbStart > 0){
+    thumbStart--;
+    renderGallery();
+  }
+};
+
+thumbNext.onclick = e => {
+  e.stopPropagation();
+
+  if(thumbStart + visibleThumbs < accImages.length){
+    thumbStart++;
+    renderGallery();
+  }
+};
+
+/* إغلاق المودال */
+accNewClose.onclick = () => {
   accNewModal.classList.remove("active");
   document.body.style.overflow = "";
-});
+};
