@@ -4598,11 +4598,12 @@ color: white;
 .services-grid{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:5px;
 }
 
 .clients-section{
-  padding:15px;
+  padding:5px 15px  ;
+
   background:#f4f6f9;
 }
 
@@ -4615,7 +4616,7 @@ color: white;
   display:grid;
   align-items:center;
    grid-template-columns:78px 1fr 42px;
-    gap:8px;
+    gap:-15px;
     padding:12px;
 
   overflow:hidden;
