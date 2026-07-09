@@ -5045,6 +5045,92 @@ border: 1PX solid #2055D4;
 
 
 /* ============================================================== MODAL ACCESSORIES ==================================================== */
+/* ACCESSORIES MOBILE FIX */
+
+  .acc-section{
+    padding: 25px 16px;
+  }
+
+  .acc-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .acc-card{
+    width: 100%;
+    min-height: 275px;
+    padding: 12px 10px;
+    border-radius: 22px;
+    position: relative;
+  }
+
+  .acc-card > img{
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 14px;
+  }
+
+.acc-card img{
+  max-width: 100%;
+  display: block;
+}
+
+  .acc-heart{
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    top: 14px;
+    left: 14px;
+  }
+
+/* اسم المنتج */
+  .acc-card h3{
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 8px 0 6px;
+    min-height: 55px;
+  }
+
+/* اسم الماركة */
+  .acc-card p{
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  /* النجوم والعدد */
+  .acc-rate{
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .acc-rate span{
+    font-size: 14px;
+  }
+
+  .acc-bottom{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+/* السعر */
+  .acc-bottom strong{
+    font-size: 21px;
+    white-space: nowrap;
+  }
+
+  .acc-open-btn{
+    width: 45px;
+    height: 45px;
+    border-radius: 16px;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
 
   .acc-new-modal{
     padding:0;
@@ -5136,7 +5222,7 @@ border: 1PX solid #2055D4;
     flex:0 0 62px !important;
     border-radius:14px;
     padding:6px;
-    background:#f07502;
+    background:#fbf7f4;
   }
   
   .acc-dots{
@@ -5209,87 +5295,6 @@ border: 1PX solid #2055D4;
     z-index:9999999;
   }
 
-/* ACCESSORIES MOBILE FIX */
-
-  .acc-section{
-    padding: 25px 16px;
-  }
-
-  .acc-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .acc-card{
-    width: 100%;
-    min-height: 275px;
-    padding: 12px 10px;
-    border-radius: 22px;
-    position: relative;
-  }
-
-  .acc-card > img{
-    width: 100%;
-    height: 110px;
-    object-fit: contain;
-    margin-bottom: 14px;
-  }
-
-.acc-card img{
-  max-width: 100%;
-  display: block;
-}
-
-  .acc-heart{
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    top: 14px;
-    left: 14px;
-  }
-
-  .acc-card h3{
-    font-size: 18px;
-    line-height: 1.35;
-    margin: 8px 0 6px;
-    min-height: 55px;
-  }
-
-  .acc-card p{
-    font-size: 15px;
-    margin-bottom: 8px;
-  }
-
-  .acc-rate{
-    font-size: 14px;
-    white-space: nowrap;
-  }
-
-  .acc-rate span{
-    font-size: 14px;
-  }
-
-  .acc-bottom{
-    margin-top: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  .acc-bottom strong{
-    font-size: 21px;
-    white-space: nowrap;
-  }
-
-  .acc-open-btn{
-    width: 45px;
-    height: 45px;
-    border-radius: 16px;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
 
 
 
