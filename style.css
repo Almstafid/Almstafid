@@ -2607,7 +2607,7 @@ font-size:22px;
 
 
 /* ================================= CLIENTS SECTION ================================ */
-/* ================================= CLIENTS SECTION ================================ */
+
 
 .clients-section{
     padding:50px 20px;
@@ -3421,8 +3421,8 @@ border: 1PX solid #2055D4;
   position:fixed;
   top:25px;
   right:25px;
-  width:50px;
-  height:50px;
+  width:35px;
+  height:35px;
   border-radius:50%;
   background:#fff;
   color:#071325;
@@ -3430,7 +3430,7 @@ border: 1PX solid #2055D4;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:24px;
+  font-size:20px;
   cursor:pointer;
   box-shadow:0 10px 30px rgba(0,0,0,.2);
   z-index:99999999;
@@ -5107,6 +5107,7 @@ border: 1PX solid #2055D4;
     white-space: nowrap;
       margin: 0 ;
     line-height: 1.2;
+        margin-top: 8px;
   }
 
   .acc-rate span{
