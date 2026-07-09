@@ -5136,7 +5136,7 @@ border: 1PX solid #2055D4;
     flex:0 0 62px !important;
     border-radius:14px;
     padding:6px;
-    background:#f4f7fb;
+    background:#f07502;
   }
   
   .acc-dots{
@@ -5235,7 +5235,7 @@ border: 1PX solid #2055D4;
     object-fit: contain;
     margin-bottom: 14px;
   }
-  
+
 .acc-card img{
   max-width: 100%;
   display: block;
