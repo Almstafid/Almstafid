@@ -5088,7 +5088,11 @@ border: 1PX solid #2055D4;
 
 /* اسم المنتج */
   .acc-card h3{
+<<<<<<< HEAD
     font-size: 14px;
+=======
+    font-size: 15px;
+>>>>>>> 0385079a0ed795fbdc9d3907bb98545d7ecbab72
     line-height: 1.2;
     margin: 4px 0 5px;
     min-height: auto;
@@ -5124,7 +5128,11 @@ border: 1PX solid #2055D4;
   }
 
   .acc-bottom strong{
+<<<<<<< HEAD
     font-size: 18px;
+=======
+    font-size: 21px;
+>>>>>>> 0385079a0ed795fbdc9d3907bb98545d7ecbab72
     white-space: nowrap;
   }
 
@@ -5254,7 +5262,11 @@ border: 1PX solid #2055D4;
   }
 
   .acc-new-info h2{
+<<<<<<< HEAD
     font-size:20px;
+=======
+    font-size:28px;
+>>>>>>> 0385079a0ed795fbdc9d3907bb98545d7ecbab72
     line-height:1.2;
     margin-top:0 !important;
   }
