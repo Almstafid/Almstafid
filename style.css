@@ -5300,8 +5300,7 @@ border: 1PX solid #2055D4;
   border-radius:18px;
   font-size:18px;
   z-index:auto;
-  margin-top:20px;
-  margin-bottom:20px;
+  margin: 20 0 40px;
 }
 
 
